@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+    name = Xuan Xie
+    email = lonelyeagle@gmail.com 
+[core]
+    autocrlf = false
+    eol = lf
+    pager = 
+[pull]
+    ff = only
+[merge]
+    conflictstyle = zdiff3
+[rebase]
+    autosquash = true
+[diff]
+    algorithm = histogram
+[branch]
+    sort = -committerdate
+[help]
+    autocorrect = 10
