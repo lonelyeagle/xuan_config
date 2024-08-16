@@ -7,7 +7,7 @@ filetype off
 call plug#begin()
 
 " List your plugins here
-Plug 'tpope/vim-sensible'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -48,3 +48,9 @@ set ttyfast
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
+
+" nerdtree config
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
