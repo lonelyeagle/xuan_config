@@ -13,6 +13,7 @@ config.font_size = 19
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 5
 config.window_decorations = 'RESIZE|INTEGRATED_BUTTONS'
+config.window_close_confirmation = 'NeverPrompt'
 
 config.window_frame = {
     -- Berkeley Mono for me again, though an idea could be to try a
