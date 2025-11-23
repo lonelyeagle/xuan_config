@@ -1,5 +1,6 @@
 eval "$(starship init zsh)"
 source <(fzf --zsh)
+export FZF_DEFAULT_OPTS='--multi --no-height --extended'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
