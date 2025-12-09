@@ -2,6 +2,9 @@ eval "$(starship init zsh)"
 source <(fzf --zsh)
 export FZF_DEFAULT_OPTS='--multi --no-height --extended'
 
+export EDITOR=vim
+export VISUAL="$EDITOR"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias ls="eza --icons=always"
@@ -24,3 +27,6 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
