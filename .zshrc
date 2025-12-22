@@ -15,6 +15,12 @@ export NVM_DIR="$HOME/.nvm"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh completions
+if [ -e /usr/share/zsh/site-functions ]; then
+  fpath=(/usr/share/zsh/site-functions $fpath)
+fi
+
+autoload -U compinit && compinit
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
