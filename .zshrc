@@ -25,9 +25,14 @@ autoload -U compinit && compinit
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
-setopt share_history
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_save_no_dups
 setopt hist_verify
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
