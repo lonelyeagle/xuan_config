@@ -20,12 +20,20 @@ if [ -e /usr/share/zsh/site-functions ]; then
   fpath=(/usr/share/zsh/site-functions $fpath)
 fi
 
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
+
+if type brew &>/dev/null; then
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+autoload -Uz compinit
+compinit
+fi
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
 HISTDUP=erase
+setopt auto_cd
 setopt appendhistory
 setopt sharehistory
 setopt hist_expire_dups_first
