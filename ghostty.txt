@@ -1,21 +1,39 @@
-# 字体设置
-font-family = BlexMono Nerd Font Mono
-font-size = 16
+# Font
+font-family = Hack Nerd Font Mono
+font-size = 20
 
-# 主题和样式
-theme = "Gruvbox Dark Hard"
-cursor-style = block
-adjust-cell-height = 35%
+# Theme
+theme =Catppuccin Mocha
+cursor-style = bar
+adjust-cell-height = 2
+cursor-style-blink = true
+cursor-opacity = 0.8
 
-
-# 鼠标相关
+# Mouse
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
+copy-on-select = clipboard
 
-# 窗口设置
+# Window
 window-padding-balance = true
 window-save-state = always
 window-colorspace = "display-p3"
+macos-titlebar-style = transparent
 
-# 颜色设置
+
+# --- Quick Terminal ---
+quick-terminal-position = top
+quick-terminal-screen = mouse
+quick-terminal-autohide = true
+quick-terminal-animation-duration = 0.15
+
+# --- Security ---
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
+# Color
 background = 1C2021
+
+# --- Tab---
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+enter=toggle_split_zoom
+keybind = cmd+shift+f=toggle_split_zoom
